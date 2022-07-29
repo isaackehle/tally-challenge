@@ -71,9 +71,9 @@ These questions are close to our daily work. Give them some thought and let's ch
   - [alchemy_gettokenmetadata](https://docs.alchemy.com/alchemy/enhanced-apis/token-api/alchemy_gettokenmetadata)
 - [placehodler](https://placehodler.shapelabs.co/)
 
-  ## Feedback
+## Feedback
 
-  How could we improve this test?
+How could we improve this test?
 
 - Add `npm install` to README.md. the `tally.cash` repo installs with `yarn`
 
