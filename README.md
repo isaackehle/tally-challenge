@@ -74,3 +74,12 @@ These questions are close to our daily work. Give them some thought and let's ch
   ## Feedback
 
   How could we improve this test?
+
+- Add `npm install` to README.md. the `tally.cash` repo installs with `yarn`
+
+- Add instructions for starting the server. It's nice that `npm build` gives this output:
+
+```bash
+npm install -g serve
+serve -s build
+```
