@@ -83,3 +83,21 @@ How could we improve this test?
 npm install -g serve
 serve -s build
 ```
+
+- Doh! Prerequesites
+
+While this seems like it could be obvious, installing the Tally dApp extension was not super obvious. Then using it to create a wallet also wasn't obvious. Should there be a list of Doh! Prerequesites? Things that should be obvious that aren't?
+
+## Assessment Output
+
+Please fork this repo, and implement a simple single page app that
+
+- Let's the user connect to their wallet :heavy_check_mark:
+  - (optional) Verify if the used wallet is tally
+- Implements sign in with ethereum for signing in :heavy_check_mark:
+- Signs an arbitrary text using the wallet and save it to local storage
+  - Please choose which RPC method you want to use!
+- Use alchemy api to
+  - Get the token balances for the connected address
+  - (optional) Get the metadata for the tokens
+  - Display the output according the mockup
