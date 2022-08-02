@@ -37,3 +37,7 @@
 - Move to a singleton for ethereum messages
 - could create a folder for react components
 - other cleanup of unused inputs and code
+
+## Step 8
+
+- I took a quick stab at trying to include .env into the frontend with the [dotenv](https://www.npmjs.com/package/dotenv) package. This is obviously something that would be secured. For now, hardcoding.

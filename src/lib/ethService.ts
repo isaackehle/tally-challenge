@@ -1,6 +1,10 @@
 import { ethers } from "ethers";
 import { generateNonce, SiweMessage } from "siwe";
 
+// TODO: Move to a secure location.
+const API_URL = "https://eth-goerli.alchemyapi.io/v2/_ArbR3W9Ttz3Cx1Ofa_vVhcIxzxbx7tC";
+const PRIVATE_KEY = "_ArbR3W9Ttz3Cx1Ofa_vVhcIxzxbx7tC";
+
 export { ethService };
 
 class EthService {
@@ -9,6 +13,10 @@ class EthService {
   address = "";
   message = "";
   signature = "";
+
+  constructor() {
+    console.log({ API_URL, PRIVATE_KEY });
+  }
 
   createSiweMessage = async (address: string, statement: string) => {
     const domain = window.location.host;
