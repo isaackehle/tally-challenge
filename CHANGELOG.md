@@ -27,3 +27,7 @@
 - could have created a template for the transactions vs title bar
 - For reference: <https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background>
 - Filled out basic layout
+
+## Step 6
+
+- helper function for icon selection
