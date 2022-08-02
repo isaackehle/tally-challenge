@@ -7,10 +7,20 @@ import Col from "react-bootstrap/Col";
 import { ethService } from "./lib";
 
 class SignMessageInput extends React.Component {
+  state = {
+    messages: ["It's the end of the world, and we know it.", "And I feel fine...", "- REM"],
+  };
+
   render() {
     const textInputClasses = ["mb-3"].join(" ");
     const buttonClasses = ["mb-3"].join(" ");
     const containerClasses = ["my-3"].join(" ");
+
+    const updateText = (index: number, val: string) => {
+      const messages = this.state.messages.slice();
+      messages[index] = val;
+      this.setState({ messages: messages });
+    };
 
     return (
       <div>
@@ -18,15 +28,13 @@ class SignMessageInput extends React.Component {
           <Row>
             <Col xs={12} sm={9}>
               <Form>
-                <Form.Group className={textInputClasses} controlId="exampleForm.ControlInput1">
-                  <Form.Control placeholder="It's the end of the world, and we know it." />
-                </Form.Group>
-                <Form.Group className={textInputClasses} controlId="exampleForm.ControlInput2">
-                  <Form.Control placeholder="And I feel fine..." />
-                </Form.Group>
-                <Form.Group className={textInputClasses} controlId="exampleForm.ControlInput3">
-                  <Form.Control placeholder="- REM" />
-                </Form.Group>
+                {this.state.messages.map((item, key) => (
+                  <React.Fragment key={key}>
+                    <Form.Group className={textInputClasses} controlId="input{key}">
+                      <Form.Control value={item} onChange={(e: any) => updateText(key, e.target.value)} />
+                    </Form.Group>
+                  </React.Fragment>
+                ))}
               </Form>
             </Col>
             <Col xs={12} sm={3}>
@@ -41,7 +49,8 @@ class SignMessageInput extends React.Component {
   }
 
   async signMessage() {
-    const message = "";
+    const message = this.state.messages.join("\n");
+    console.log({ message });
     ethService.signMessage(message);
   }
 }

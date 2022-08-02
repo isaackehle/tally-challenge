@@ -47,3 +47,8 @@
 - woot for protections
 
 ![GitGuardian Warning](./exposed.png "GitGuardian")
+
+## Step 10
+
+- converted the form to an array of text inputs, with `React.Fragment`.
+- validated form data is pulled
