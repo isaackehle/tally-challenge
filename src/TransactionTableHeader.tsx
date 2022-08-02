@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
@@ -16,7 +15,6 @@ class TransactionTableHeader extends React.Component {
     };
     return (
       <Card body style={cardStyle} className={cardClasses}>
-        {/* <Container> */}
         <Row style={{ textAlign: "center" }}>
           <Col xs={2}>Token icon</Col>
           <Col xs={2}>Current balance</Col>
@@ -24,7 +22,6 @@ class TransactionTableHeader extends React.Component {
           <Col xs={2}>Token name</Col>
           <Col>Contract address</Col>
         </Row>
-        {/* </Container> */}
       </Card>
     );
   }

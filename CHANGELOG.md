@@ -31,3 +31,9 @@
 ## Step 6
 
 - helper function for icon selection
+
+## Step 7
+
+- Move to a singleton for ethereum messages
+- could create a folder for react components
+- other cleanup of unused inputs and code

@@ -1,26 +1,21 @@
 import React from "react";
-import { ethers } from "ethers";
 import { FaGlassCheers, FaHeart } from "react-icons/fa";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
 class Transaction extends React.Component {
-  message = "";
-  signature = "";
-
-  provider = new ethers.providers.Web3Provider(window.ethereum);
-  signer = this.provider.getSigner();
-
-  icon = "heart";
-  balance = 12.123;
-  symbol = "RLC";
-  name = "iExec RLC";
-  contractAddress = "0x6074c5bb672230e8672085532f7e901544a7375";
+  state = {
+    icon: "heart",
+    balance: 12.123,
+    symbol: "RLC",
+    name: "iExec RLC",
+    contractAddress: "0x6074c5bb672230e8672085532f7e901544a7375",
+  };
 
   // This of course could be its own library
-  private getIcon(type: string) {
-    switch (type) {
+  private getIcon() {
+    switch (this.state.icon) {
       case "heart":
         return <FaHeart />;
       default:
@@ -42,11 +37,11 @@ class Transaction extends React.Component {
     return (
       <Card body style={cardStyle} className={cardClasses}>
         <Row style={{ textAlign: "center" }}>
-          <Col xs={2}>{this.getIcon(this.icon)}</Col>
-          <Col xs={2}>{this.balance}</Col>
-          <Col xs={2}>{this.symbol}</Col>
-          <Col xs={2}>{this.name}</Col>
-          <Col style={{ overflowX: "clip" }}>{this.contractAddress}</Col>
+          <Col xs={2}>{this.getIcon()}</Col>
+          <Col xs={2}>{this.state.balance}</Col>
+          <Col xs={2}>{this.state.symbol}</Col>
+          <Col xs={2}>{this.state.name}</Col>
+          <Col style={{ overflowX: "clip" }}>{this.state.contractAddress}</Col>
         </Row>
       </Card>
     );
