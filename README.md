@@ -93,7 +93,10 @@ While this seems like it could be obvious, installing the Tally dApp extension w
 Please fork this repo, and implement a simple single page app that
 
 - Let's the user connect to their wallet :heavy_check_mark:
+
   - (optional) Verify if the used wallet is tally
+    - I noticed this in the logs: `content: inpage > background: {"id":"0","target":"tally-provider-bridge","request":{"method":"eth_chainId","params":[]}}`. Quite possibly there is a library or part of the plugin that can be extended to handle a call to get information about the waller.
+
 - Implements sign in with ethereum for signing in :heavy_check_mark:
 - Signs an arbitrary text using the wallet and save it to local storage
   - Please choose which RPC method you want to use!
