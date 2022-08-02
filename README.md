@@ -98,7 +98,7 @@ Please fork this repo, and implement a simple single page app that
     - I noticed this in the logs: `content: inpage > background: {"id":"0","target":"tally-provider-bridge","request":{"method":"eth_chainId","params":[]}}`. Quite possibly there is a library or part of the plugin that can be extended to handle a call to get information about the waller.
 
 - Implements sign in with ethereum for signing in :heavy_check_mark:
-- Signs an arbitrary text using the wallet and save it to local storage
+- Signs an arbitrary text using the wallet and save it to local storage :heavy_check_mark:
   - Please choose which RPC method you want to use!
 - Use alchemy api to
   - Get the token balances for the connected address

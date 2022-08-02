@@ -52,3 +52,7 @@
 
 - converted the form to an array of text inputs, with `React.Fragment`.
 - validated form data is pulled
+
+## Step 11
+
+- Signing a message

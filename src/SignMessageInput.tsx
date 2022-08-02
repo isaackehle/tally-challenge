@@ -50,7 +50,6 @@ class SignMessageInput extends React.Component {
 
   async signMessage() {
     const message = this.state.messages.join("\n");
-    console.log({ message });
     ethService.signMessage(message);
   }
 }
