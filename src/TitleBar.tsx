@@ -1,6 +1,11 @@
 import React from "react";
 import { ethers } from "ethers";
 import { generateNonce, SiweMessage } from "siwe";
+import Button from "react-bootstrap/Button";
+import Stack from "react-bootstrap/Stack";
+// import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
 
 class TitleBar extends React.Component {
   message = "";
@@ -12,9 +17,21 @@ class TitleBar extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.connectWallet()}>Connect wallet</button>
-        <button onClick={() => this.signInWithEthereum()}>Sign-in with Ethereum</button>
-        {/* <button onClick={() => this.sendForVerification()}>Send for Verification</button> */}
+        <Stack gap={3}>
+          <Button variant="primary" onClick={() => this.connectWallet()}>
+            Connect wallet
+          </Button>
+
+          <Button variant="primary" onClick={() => this.signInWithEthereum()}>
+            Sign-in with Ethereum
+          </Button>
+        </Stack>
+
+        {/* <Container>
+          <Row>
+            <Col></Col>
+          </Row>
+        </Container> */}
       </div>
     );
   }
