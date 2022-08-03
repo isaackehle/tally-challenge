@@ -103,4 +103,4 @@ Please fork this repo, and implement a simple single page app that
 - Use alchemy api to
   - Get the token balances for the connected address :heavy_check_mark:
   - (optional) Get the metadata for the tokens :heavy_check_mark:
-  - Display the output according the mockup
+  - Display the output according the mockup :heavy_check_mark:

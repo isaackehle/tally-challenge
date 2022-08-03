@@ -61,3 +61,10 @@
 
 - fixed issue with alchemy package
 - added functions to query alchemy to Get the token balances and metadata for the tokens
+
+## Step 13
+
+- Lucky number 13
+- Passing data down to Transaction elements
+- Added empty list card, for basic notification to ask the user to fetch data.
+  - This does not take into consideration of the case when there just is no data.
