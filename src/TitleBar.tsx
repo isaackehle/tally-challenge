@@ -22,14 +22,14 @@ class TitleBar extends React.Component {
         <Container>
           <Row className={cardClasses}>
             <Col xs={12}>
-              <Button variant="primary" onClick={() => this.connectWallet()}>
+              <Button variant="primary" onClick={() => ethService.connectToWallet()}>
                 Connect wallet
               </Button>
             </Col>
           </Row>
           <Row className={cardClasses}>
             <Col xs={12}>
-              <Button variant="primary" onClick={() => this.signInWithEthereum()}>
+              <Button variant="primary" onClick={() => ethService.signIn()}>
                 Sign-in with Ethereum
               </Button>
             </Col>
@@ -38,23 +38,6 @@ class TitleBar extends React.Component {
       </div>
     );
   }
-
-  private async connectWallet() {
-    ethService.connectToWallet();
-  }
-
-  private async signInWithEthereum() {
-    ethService.signIn();
-  }
-
-  // async sendForVerification() {
-  //   const res = await fetch(`${BACKEND_ADDR}/verify`, {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ message: this.message, signature: this.signature }),
-  //   });
-  //   console.log(await res.text());
-  // }
 }
 
 export default TitleBar;
