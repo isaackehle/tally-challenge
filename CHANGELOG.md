@@ -56,3 +56,8 @@
 ## Step 11
 
 - Signing a message
+
+## Step 12
+
+- fixed issue with alchemy package
+- added functions to query alchemy to Get the token balances and metadata for the tokens

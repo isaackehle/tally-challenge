@@ -101,6 +101,6 @@ Please fork this repo, and implement a simple single page app that
 - Signs an arbitrary text using the wallet and save it to local storage :heavy_check_mark:
   - Please choose which RPC method you want to use!
 - Use alchemy api to
-  - Get the token balances for the connected address
-  - (optional) Get the metadata for the tokens
+  - Get the token balances for the connected address :heavy_check_mark:
+  - (optional) Get the metadata for the tokens :heavy_check_mark:
   - Display the output according the mockup

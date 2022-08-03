@@ -19,7 +19,7 @@ class SignMessageInput extends React.Component {
     const updateText = (index: number, val: string) => {
       const messages = this.state.messages.slice();
       messages[index] = val;
-      this.setState({ messages: messages });
+      this.setState({ messages });
     };
 
     return (
